@@ -6,6 +6,7 @@ import Toggles from "@/components/Toggles";
 import Projects from "@/components/Projects";
 import { ChevronDoubleDownIcon } from "@heroicons/react/20/solid";
 import Contact from "@/components/Contact";
+import Link from "next/link";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -37,12 +38,13 @@ export default function Home() {
           <div className={"mt-4 w-full"}>
             <Links />
           </div>
-          <div
+          <Link
+            href={"#projects"}
             className={"mt-10 flex flex-col items-center justify-center gap-4"}
           >
             <p>{t("moreInfo")}</p>
             <ChevronDoubleDownIcon className={"h-10 w-10 animate-bounce"} />
-          </div>
+          </Link>
         </section>
         <section
           id={"projects"}
