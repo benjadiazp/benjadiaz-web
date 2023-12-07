@@ -20,10 +20,7 @@ export default function Home() {
         <Navigation />
       </header>
       <main className="relative w-full">
-        <section
-          id={"home"}
-          className={"w-full px-4 sm:mx-auto sm:max-w-screen-2xl"}
-        >
+        <section id={"home"} className={"w-full px-4 sm:mx-auto"}>
           <div
             className={
               "mx-auto px-4 pt-4 sm:max-w-screen-lg sm:px-16 sm:pb-6 sm:pt-16"
