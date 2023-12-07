@@ -1,0 +1,93 @@
+{
+  "Home": {
+    "title": "Benjamín Díaz",
+    "subtitle": "Ingeniero de Software",
+    "description": "Desarrollador de software full stack de Chillán, Chile 🇨🇱. Me gusta construir software y usar la tecnología de formas creativas ❤️🐧🐻.",
+    "moreInfo": "Más info 👇"
+  },
+  "Links": {
+    "github": "Github",
+    "githubUsername": "@benjadiazp",
+    "githubUrl": "https://github.com/benjadiazp",
+    "linkedin": "Linkedin",
+    "linkedinUsername": "benjamindiaz",
+    "linkedinUrl": "https://www.linkedin.com/in/benjamindiaz/",
+    "twitter": "Twitter",
+    "twitterUsername": "@benjadiazp",
+    "twitterUrl": "https://twitter.com/benjadiazp",
+    "instagram": "Instagram",
+    "instagramUsername": "@benjadiazp",
+    "instagramUrl": "https://www.instagram.com/benjadiazp/",
+    "tiktok": "TikTok",
+    "tiktokUsername": "@benjadiazp",
+    "tiktokUrl": "https://www.tiktok.com/@benjadiazp",
+    "youtube": "Youtube",
+    "youtubeUsername": "@benjadiazp",
+    "youtubeUrl": "https://www.youtube.com/@benjadiazp"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "Toggles": {
+    "dark": "Modo oscuro 🌙",
+    "light": "Modo claro 🌞",
+    "english": "EN 🇺🇸",
+    "spanish": "ES 🇨🇱"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "drizip": {
+      "title": "Drizip SpA",
+      "subtitle": "Ingeniero de Software",
+      "period": "2020 - 2023",
+      "description": {
+        "p1": "Drizip es una plataforma que permite a propietarios de autos arrendar sus vehículos a otras personas, disponible en Chile y México.",
+        "p2": "Durante mi tiempo en Drizip, trabajé en el backend y frontend de la plataforma y desplegué la infraestructura en AWS."
+      },
+      "imgSrc": "/img/drizip.png",
+      "href": "https://drizip.com",
+      "linkLabel": "drizip.com",
+      "tags": "React, Next.js, TypeScript, Node.js, Express, MongoDB, Meteor, AWS"
+    },
+    "roldic": {
+      "period": "September 2022",
+      "title": "Roldic Commerce SpA",
+      "subtitle": "Proyecto de desarrollo de software",
+      "description": {
+        "p1": "Roldic es una tienda que comercializa bicicletas junto a sus repuestos y accesorios.",
+        "p2": "Para este proyecto, desarrollé una plataforma E-Commerce completa, incluyendo storefront, backoffice y una API que conecta todo."
+      },
+      "imgSrc": "/img/roldic.png",
+      "href": "https://roldic.cl",
+      "linkLabel": "roldic.cl",
+      "tags": "React, Next.js, TypeScript, Node.js, NestJS, Express, MongoDB, Segment, AWS, Vercel, MercadoPago, Transbank"
+    },
+    "oso": {
+      "period": "Marzo 2020",
+      "title": "Oso Sigiloso",
+      "subtitle": "Videojuego",
+      "description": {
+        "p1": "Como parte de una investigación de pregrado, desarrollé un videojuego para demostrar un proceso sencillo para iniciarse en el desarrollo de videojuegos",
+        "p2": "Para este proyecto, escribí el código e hice la música, arte y el resto de los assets."
+      },
+      "imgSrc": "/img/oso.jpg",
+      "href": "projects/oso-sigiloso",
+      "linkLabel": "Ver más",
+      "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
+    }
+  },
+  "Contact": {
+    "title": "Contáctame",
+    "subtitle": "Ya sea que tengas una consulta o solo quieras saludar, escríbeme y te responderé lo antes posible.",
+    "email": "Correo electrónico",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar"
+    }
+  }
+}

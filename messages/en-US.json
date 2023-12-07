@@ -1,0 +1,91 @@
+{
+  "Home": {
+    "title": "Benjamín Díaz",
+    "subtitle": "Software Engineer",
+    "description": "Full-stack software developer based in Chile 🇨🇱.Passionate about building software and using technology creatively ❤️🐧🐻‍.",
+    "moreInfo": "More info 👇"
+  },
+  "Links": {
+    "github": "Github",
+    "githubUsername": "@benjadiazp",
+    "githubUrl": "https://github.com/benjadiazp",
+    "linkedin": "Linkedin",
+    "linkedinUsername": "benjamindiaz",
+    "linkedinUrl": "https://www.linkedin.com/in/benjamindiaz/",
+    "twitter": "Twitter",
+    "twitterUsername": "@benjadiazp",
+    "twitterUrl": "https://twitter.com/benjadiazp",
+    "instagram": "Instagram",
+    "instagramUsername": "@benjadiazp",
+    "instagramUrl": "https://www.instagram.com/benjadiazp/",
+    "tiktok": "TikTok",
+    "tiktokUsername": "@benjadiazp",
+    "tiktokUrl": "https://www.tiktok.com/@benjadiazp",
+    "youtube": "Youtube",
+    "youtubeUsername": "@benjadiazp",
+    "youtubeUrl": "https://www.youtube.com/@benjadiazp"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Toggles": {
+    "dark": "Dark mode 🌙",
+    "light": "Light mode 🌞",
+    "english": "EN 🇺🇸",
+    "spanish": "ES 🇨🇱"
+  },
+  "Projects": {
+    "title": "Projects",
+    "drizip": {
+      "title": "Drizip SpA",
+      "subtitle": "Software Engineer",
+      "period": "2020 - 2023",
+      "description": {
+        "p1": "Drizip is a platform that allows car owners to rent their cars to other people, available in Chile and México.",
+        "p2": "During my time at Drizip I worked on the backend and frontend of the platform and leveraged the infrastructure on AWS."
+      },
+      "imgSrc": "/img/drizip.png",
+      "href": "https://drizip.com",
+      "linkLabel": "drizip.com",
+      "tags": "React, Next.js, TypeScript, Node.js, Express, MongoDB, Meteor, AWS"
+    },
+    "roldic": {
+      "period": "September 2022",
+      "title": "Roldic Commerce SpA",
+      "subtitle": "Proyecto de desarrollo de software",
+      "description": {
+        "p1": "Roldic is a store that sells bicycles and their spare parts and accessories.",
+        "p2": "For this project, I developed a complete E-Commerce platform, including storefront, backoffice and an API that connects everything."
+      },
+      "imgSrc": "/img/roldic.png",
+      "href": "https://roldic.cl",
+      "linkLabel": "roldic.cl",
+      "tags": "React, Next.js, TypeScript, Node.js, NestJS, Express, MongoDB, Segment, AWS, Vercel, MercadoPago, Transbank"
+    },
+    "oso": {
+      "period": "March 2020",
+      "title": "Oso Sigiloso",
+      "subtitle": "Video game",
+      "description": {
+        "p1": "As part of an undergraduate research, I developed a video game to demonstrate a simple process to get started in game development.",
+        "p2": "For this project, I wrote the code and made the music, art and the rest of the assets."
+      },
+      "imgSrc": "/img/oso.jpg",
+      "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
+    }
+  },
+  "Contact": {
+    "title": "Contact me",
+    "subtitle": "Feel free to contact me if you want to ask me anything or just to say hi.",
+    "email": "Email",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send"
+    }
+  }
+}
