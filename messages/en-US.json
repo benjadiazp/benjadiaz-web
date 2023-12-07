@@ -73,6 +73,8 @@
         "p1": "As part of an undergraduate research, I developed a video game to demonstrate a simple process to get started in game development.",
         "p2": "For this project, I wrote the code and made the music, art and the rest of the assets."
       },
+      "href": "https://github.com/benjadiazp/OsoSigiloso",
+      "linkLabel": "Source code",
       "imgSrc": "/img/oso.jpg",
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }

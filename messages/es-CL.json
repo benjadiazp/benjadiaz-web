@@ -74,8 +74,8 @@
         "p2": "Para este proyecto, escribí el código e hice la música, arte y el resto de los assets."
       },
       "imgSrc": "/img/oso.jpg",
-      "href": "projects/oso-sigiloso",
-      "linkLabel": "Ver más",
+      "href": "https://github.com/benjadiazp/OsoSigiloso",
+      "linkLabel": "Ver código fuente",
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }
   },
