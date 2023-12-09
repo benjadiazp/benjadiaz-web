@@ -6,6 +6,7 @@ import { locales } from "@/i18n-constants";
 import ClientProviders from "@/app/ClientProviders";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 
 //const LatoFont = Lato({ weight: "400", subsets: ["latin"] });
 
@@ -37,7 +38,8 @@ export default function LocaleLayout({
         )}  bg-neutral-50 text-black duration-150 dark:bg-neutral-900 dark:text-white`}
       >
         <ClientProviders>
-          <main>{children}</main>
+          {children}
+          <Toaster />
         </ClientProviders>
       </body>
     </html>
