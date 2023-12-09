@@ -29,7 +29,7 @@ export default function LocaleLayout({
   if (!locales.includes(locale as any)) notFound();
   unstable_setRequestLocale(locale);
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={"scroll-smooth"}>
       <body
         className={`${fontSans.className} ${cn(
           "bg-background min-h-screen font-sans antialiased",

@@ -21,7 +21,7 @@ export default function Home() {
         <Navigation />
       </header>
       <main className="relative w-full">
-        <section id={"home"} className={"w-full px-4 sm:mx-auto"}>
+        <section id={"home"} className={"w-full scroll-mt-24 px-4 sm:mx-auto"}>
           <div
             className={
               "mx-auto px-4 pt-4 sm:max-w-screen-lg sm:px-16 sm:pb-6 sm:pt-16"
@@ -40,7 +40,9 @@ export default function Home() {
           </div>
           <Link
             href={"#projects"}
-            className={"mt-10 flex flex-col items-center justify-center gap-4"}
+            className={
+              "mt-10 flex scroll-mt-32 flex-col items-center justify-center gap-4"
+            }
           >
             <p>{t("moreInfo")}</p>
             <ChevronDoubleDownIcon className={"h-10 w-10 animate-bounce"} />
@@ -48,13 +50,17 @@ export default function Home() {
         </section>
         <section
           id={"projects"}
-          className={"mt-10 w-full px-4 sm:mx-auto sm:max-w-screen-lg"}
+          className={
+            "mt-10 w-full scroll-mt-24 px-4 sm:mx-auto sm:max-w-screen-lg"
+          }
         >
           <Projects />
         </section>
         <section
           id={"contact"}
-          className={"mt-10  w-full px-4 sm:mx-auto sm:max-w-screen-lg"}
+          className={
+            "mt-10 w-full scroll-mt-24 px-4 sm:mx-auto sm:max-w-screen-lg"
+          }
         >
           <Contact />
         </section>
