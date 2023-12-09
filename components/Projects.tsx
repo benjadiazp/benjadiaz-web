@@ -35,7 +35,7 @@ const Project = ({
   return (
     <div
       className={
-        "flex w-full flex-row justify-evenly gap-4 even:flex-row-reverse"
+        "flex w-full flex-col justify-evenly gap-4 sm:flex-row even:sm:flex-row-reverse"
       }
     >
       <div

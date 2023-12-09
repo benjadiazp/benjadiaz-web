@@ -51,7 +51,7 @@ export const ThemeSwitch = ({
 
   return (
     <button
-      className={`rounded-2xl px-4 py-2 font-mono text-xs font-medium hover:bg-neutral-400 dark:hover:bg-neutral-700 ${
+      className={`rounded-2xl px-4 py-2 font-mono text-sm font-medium hover:underline ${
         theme === "light" ? "" : ""
       }`}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

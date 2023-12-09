@@ -21,7 +21,7 @@ const LanguageButton = ({
   return (
     <button
       type="button"
-      className={`text-xs  hover:text-gray-700 ${
+      className={`text-xs  hover:underline ${
         currentLocale === locale
           ? "border-b-2 border-red-500 font-bold"
           : "font-normal"
