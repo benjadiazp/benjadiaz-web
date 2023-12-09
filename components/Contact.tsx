@@ -12,7 +12,7 @@ export default function Contact() {
         <div className={"flex flex-col items-center justify-center gap-4"}>
           <Link
             className={
-              "mt-4 flex items-center justify-center gap-2 rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600 dark:hover:bg-red-400 md:px-8 md:py-4"
+              "mt-4 flex items-center justify-center gap-2 rounded-md bg-red-700 px-4 py-2 font-bold  text-white hover:bg-red-600 dark:hover:bg-red-400 md:px-8 md:py-4"
             }
             href={"mailto:hello@benjadiaz.com"}
           >
