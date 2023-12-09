@@ -34,9 +34,6 @@ export const ThemeSwitch = ({
         detectedLocale = defaultLocale;
     }
 
-    console.log(currentLocale);
-    console.log(detectedLocale);
-
     if (locales.includes(detectedLocale) && currentLocale !== detectedLocale) {
       toast({
         title: "Recomendación",
