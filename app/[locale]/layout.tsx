@@ -43,7 +43,7 @@ export default function LocaleLayout({
           <Toaster />
         </ClientProviders>
       </body>
-      <Script id={"clarity"}>
+      <Script id={"ms_clarity"}>
         {`(function (c, l, a, r, i, t, y){
           c[a] = c[a] || function () {
             (c[a].q = c[a].q || []).push(arguments)
