@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className={"text-4xl font-normal md:text-5xl"}>{t("title")}</h1>
             <h2
               className={
-                "mt-2 inline-block bg-gradient-to-r from-red-500 to-orange-500  bg-clip-text text-2xl font-medium text-transparent md:text-3xl"
+                "background-animate mt-2 inline-block bg-gradient-to-r from-red-500  to-orange-500 bg-clip-text text-2xl font-medium text-transparent md:text-3xl"
               }
             >
               {t("subtitle")}

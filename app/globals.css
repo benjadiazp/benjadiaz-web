@@ -74,25 +74,25 @@
     body {
         @apply bg-background text-foreground;
     }
-}
 
-.background-animate {
-    background-size: 100%;
+    .background-animate {
+        background-size: 100%;
 
-    -webkit-animation: BackgroundMovement 3s ease infinite;
-    -moz-animation: BackgroundMovement 3s ease infinite;
-    animation: gradient 3s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
+        -webkit-animation: BackgroundMovement 3s ease infinite;
+        -moz-animation: BackgroundMovement 3s ease infinite;
+        animation: gradient 3s ease infinite;
     }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 }
 
