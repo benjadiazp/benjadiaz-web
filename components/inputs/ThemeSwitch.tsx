@@ -21,28 +21,28 @@ export const ThemeSwitch = ({
   useEffect(() => {
     setMounted(true);
     /*
-        const browserLang = navigator.language.split("-")[0];
-        let detectedLocale = defaultLocale;
-    
-        switch (browserLang) {
-          case "es":
-            detectedLocale = "es-CL";
-            break;
-          case "en":
-            detectedLocale = "en-US";
-            break;
-          default:
-            detectedLocale = defaultLocale;
-        }
-    
-        if (locales.includes(detectedLocale) && currentLocale !== detectedLocale) {
-          toast({
-            title: "Recomendación",
-            description: "Quizás quieras cambiar de idioma.",
-          });
-        }
-        
-         */
+                const browserLang = navigator.language.split("-")[0];
+                let detectedLocale = defaultLocale;
+            
+                switch (browserLang) {
+                  case "es":
+                    detectedLocale = "es-CL";
+                    break;
+                  case "en":
+                    detectedLocale = "en-US";
+                    break;
+                  default:
+                    detectedLocale = defaultLocale;
+                }
+            
+                if (locales.includes(detectedLocale) && currentLocale !== detectedLocale) {
+                  toast({
+                    title: "Recomendación",
+                    description: "Quizás quieras cambiar de idioma.",
+                  });
+                }
+                
+                 */
   }, []);
 
   if (!mounted) {
@@ -51,7 +51,7 @@ export const ThemeSwitch = ({
 
   return (
     <button
-      className={`rounded-2xl px-4 py-2 font-mono text-sm font-medium hover:underline ${
+      className={`rounded-2xl px-4 py-2 font-mono text-xs font-medium hover:underline sm:text-sm ${
         theme === "light" ? "" : ""
       }`}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

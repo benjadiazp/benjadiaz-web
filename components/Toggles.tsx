@@ -7,7 +7,9 @@ export default function Toggles() {
   const currentLocale = useLocale();
   return (
     <>
-      <div className={"flex flex-wrap items-center justify-start gap-6"}>
+      <div
+        className={"flex flex-wrap items-center justify-center gap-4 sm:gap-6"}
+      >
         <ThemeSwitch
           labels={{
             light: t("light"),
