@@ -7,7 +7,7 @@ const Tag = ({ children }: { children: React.ReactNode }) => {
   return (
     <span
       className={
-        "rounded-lg bg-gray-200 px-2 py-1 font-mono text-xs dark:bg-gray-700"
+        "rounded-lg border-2 border-gray-300 bg-gray-100 px-2 py-1 font-mono text-xs dark:border-gray-500 dark:bg-gray-700"
       }
     >
       {children}

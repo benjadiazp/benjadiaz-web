@@ -19,9 +19,9 @@ export default function Navigation() {
   const t = useTranslations("Navigation");
   return (
     <nav className={"flex justify-end gap-4"}>
-      <NavItem href={"#home"}>{t("home")}</NavItem>
-      <NavItem href={"#projects"}>{t("projects")}</NavItem>
-      <NavItem href={"#contact"}>{t("contact")}</NavItem>
+      <NavItem href={"/#home"}>{t("home")}</NavItem>
+      <NavItem href={"/#projects"}>{t("projects")}</NavItem>
+      <NavItem href={"/#contact"}>{t("contact")}</NavItem>
     </nav>
   );
 }

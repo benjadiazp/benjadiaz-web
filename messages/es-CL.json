@@ -89,5 +89,8 @@
       "message": "Mensaje",
       "submit": "Enviar"
     }
+  },
+  "Footer": {
+    "privacy": "Privacidad"
   }
 }

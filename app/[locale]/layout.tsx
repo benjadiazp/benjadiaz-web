@@ -8,6 +8,8 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 //const LatoFont = Lato({ weight: "400", subsets: ["latin"] });
 
@@ -33,13 +35,15 @@ export default function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning className={"scroll-smooth"}>
       <body
-        className={`${fontSans.className} ${cn(
-          "min-h-screen bg-background font-sans antialiased",
+        className={`${fontSans.className} bg-gradient-to-b ${cn(
+          "b min-h-screen from-white via-white to-orange-100 font-sans antialiased",
           fontSans.variable,
-        )}  bg-neutral-50 text-black duration-150 dark:bg-neutral-900 dark:text-white`}
+        )}  bg-neutral-50 text-black duration-150 dark:from-slate-800 dark:to-gray-900 dark:text-white`}
       >
         <ClientProviders>
+          <Header />
           {children}
+          <Footer />
           <Toaster />
         </ClientProviders>
       </body>

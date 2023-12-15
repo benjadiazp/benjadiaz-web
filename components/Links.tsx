@@ -21,7 +21,7 @@ const ExternalLink = ({
       href={href}
       target={"_blank"}
       className={
-        "flex items-center gap-2 rounded-lg border-2 border-transparent px-2 py-2 hover:border-red-500 hover:bg-neutral-700 md:px-2"
+        "flex items-center gap-2 rounded-lg border-2 border-transparent border-opacity-60 px-2 py-2 hover:border-red-500 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5 md:px-2"
       }
     >
       {imgSrc && (
