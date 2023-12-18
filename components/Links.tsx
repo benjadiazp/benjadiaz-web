@@ -110,6 +110,14 @@ export default function LinksList() {
           imgSrc={"/img/youtube_logo.png"}
         />
       </li>
+      <li>
+        <ExternalLink
+          href={t("itchioUrl")}
+          title={t("itchio")}
+          subtitle={t("itchioUsername")}
+          imgSrc={"/img/itchio-logo.png"}
+        />
+      </li>
     </ul>
   );
 }

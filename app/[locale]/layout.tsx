@@ -38,7 +38,7 @@ export default function LocaleLayout({
         className={`${fontSans.className} bg-gradient-to-b ${cn(
           "b min-h-screen from-white via-white to-orange-100 font-sans antialiased",
           fontSans.variable,
-        )}  scroll-smooth bg-neutral-50 text-black duration-150 dark:from-slate-800 dark:to-gray-900 dark:text-white`}
+        )}  scroll-smooth bg-neutral-50 text-black duration-150 dark:bg-slate-900 dark:from-slate-800 dark:to-gray-900 dark:text-white`}
       >
         <ClientProviders>
           <Header />

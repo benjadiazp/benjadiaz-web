@@ -23,7 +23,10 @@
     "tiktokUrl": "https://www.tiktok.com/@benjadiazp",
     "youtube": "Youtube",
     "youtubeUsername": "@benjadiazdev",
-    "youtubeUrl": "https://www.youtube.com/@benjadiazdev"
+    "youtubeUrl": "https://www.youtube.com/@benjadiazdev",
+    "itchio": "itch.io",
+    "itchioUsername": "benjadiaz",
+    "itchioUrl": "https://benjadiaz.itch.io/"
   },
   "Navigation": {
     "home": "Home",
