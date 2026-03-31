@@ -1,9 +1,12 @@
+"use client";
+
 import LanguageSwitch from "@/components/inputs/LanguageSwitch";
 import { ThemeSwitch } from "@/components/inputs/ThemeSwitch";
 import { useLocale, useTranslations } from "next-intl";
 
 export default function Toggles() {
   const t = useTranslations("Toggles");
+  const tLang = useTranslations("LanguageSwitch");
   const currentLocale = useLocale();
   return (
     <>
@@ -21,6 +24,10 @@ export default function Toggles() {
           labels={{
             en: t("english"),
             es: t("spanish"),
+          }}
+          switchToLabels={{
+            en: tLang("switchTo", { label: t("english") }),
+            es: tLang("switchTo", { label: t("spanish") }),
           }}
         />
       </div>

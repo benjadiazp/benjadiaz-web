@@ -1,8 +1,6 @@
 "use client";
 import {
-  ChangeEvent,
   MouseEventHandler,
-  ReactNode,
   useTransition,
 } from "react";
 import { useRouter, usePathname } from "@/navigation";
@@ -11,22 +9,26 @@ import { useLocale } from "next-intl";
 const LanguageButton = ({
   locale,
   label,
+  switchToLabel,
   onClick,
 }: {
   locale: string;
   label: string;
+  switchToLabel: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }) => {
   const currentLocale = useLocale();
   return (
     <button
       type="button"
-      className={`text-xs hover:underline  sm:text-sm ${
+      className={`hover:underline ${
         currentLocale === locale
-          ? "border-b-2 border-red-500 font-bold"
-          : "font-normal"
+          ? "font-bold underline underline-offset-4"
+          : "font-normal text-muted-foreground"
       }`}
       onClick={onClick}
+      aria-label={switchToLabel}
+      aria-pressed={currentLocale === locale}
     >
       {label}
     </button>
@@ -36,9 +38,14 @@ const LanguageButton = ({
 export default function LanguageSwitch({
   currentLocale,
   labels,
+  switchToLabels,
 }: {
   currentLocale: string;
   labels?: {
+    es: string;
+    en: string;
+  };
+  switchToLabels?: {
     es: string;
     en: string;
   };
@@ -54,25 +61,26 @@ export default function LanguageSwitch({
   }
 
   return (
-    <>
-      <div className={"flex flex-wrap items-center justify-start gap-2"}>
-        <LanguageButton
-          locale={"en-US"}
-          label={labels?.en ?? "English"}
-          onClick={(e) => {
-            e.preventDefault();
-            onLanguageSelect("en-US");
-          }}
-        />
-        <LanguageButton
-          locale={"es-CL"}
-          label={labels?.es ?? "Spanish"}
-          onClick={(e) => {
-            e.preventDefault();
-            onLanguageSelect("es-CL");
-          }}
-        />
-      </div>
-    </>
+    <div className="flex items-center gap-1 text-xs sm:text-sm">
+      <LanguageButton
+        locale={"en-US"}
+        label={labels?.en ?? "EN"}
+        switchToLabel={switchToLabels?.en ?? "Switch language to English"}
+        onClick={(e) => {
+          e.preventDefault();
+          onLanguageSelect("en-US");
+        }}
+      />
+      <span className="text-muted-foreground select-none">/</span>
+      <LanguageButton
+        locale={"es-CL"}
+        label={labels?.es ?? "ES"}
+        switchToLabel={switchToLabels?.es ?? "Switch language to Spanish"}
+        onClick={(e) => {
+          e.preventDefault();
+          onLanguageSelect("es-CL");
+        }}
+      />
+    </div>
   );
 }

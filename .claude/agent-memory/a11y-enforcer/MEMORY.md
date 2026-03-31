@@ -1,0 +1,1 @@
+- [A11y Audit March 2026](project_a11y_audit_2026.md) — Initial full-site audit; 22 issues found including critical SSR crash blocking axe testing

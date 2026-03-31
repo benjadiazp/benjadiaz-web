@@ -2,7 +2,7 @@
   "Home": {
     "title": "Benjamín Díaz",
     "subtitle": "Ingeniero de Software",
-    "description": "Desarrollador de software full stack de Chillán, Chile 🇨🇱. Me gusta construir software y usar la tecnología de formas creativas ❤️🐧🐻.",
+    "description": "Ingeniero de Software de Chillán, Chile 🇨🇱. Me gusta construir software y usar la tecnología de formas creativas ❤️🐧🐻.",
     "moreInfo": "Más info 👇"
   },
   "Links": {
@@ -31,14 +31,16 @@
   "Navigation": {
     "home": "Inicio",
     "about": "Sobre mí",
+    "experience": "Experiencia",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "ariaLabel": "Navegación principal"
   },
   "Toggles": {
     "dark": "Modo oscuro 🌙",
     "light": "Modo claro 🌞",
-    "english": "EN 🇺🇸",
-    "spanish": "ES 🇨🇱"
+    "english": "EN",
+    "spanish": "ES"
   },
   "Projects": {
     "title": "Proyectos",
@@ -82,6 +84,55 @@
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }
   },
+  "Certificates": {
+    "title": "Certificados",
+    "seeMore": "Ver más ({count})",
+    "seeLess": "Ver menos"
+  },
+  "WorkHistory": {
+    "title": "Experiencia",
+    "seeMore": "Ver más ({count})",
+    "seeLess": "Ver menos",
+    "now": "hoy",
+    "current": "Actual",
+    "microsoft": {
+      "company": "Microsoft",
+      "location": "Chile · Remoto",
+      "role2": "Software Engineer II",
+      "period2": "2025 – Actualidad",
+      "role1": "Software Engineer",
+      "period1": "2024 – 2025"
+    },
+    "insideSecurity": {
+      "company": "Inside Security",
+      "location": "Chile · Remoto",
+      "role": "Full Stack Engineer",
+      "period": "2024",
+      "description": "Desarrollo de software para fábrica de aplicaciones de Inside Security. Implementación de buenas prácticas y patrones de diseño y arquitectura en repositorios de software. Desarrollo de software seguro."
+    },
+    "drizip": {
+      "company": "Drizip",
+      "location": "Santiago, Chile · Remoto",
+      "role": "Software Engineer",
+      "period": "2020 – 2023",
+      "description": "Como ingeniero de software en Drizip, colaboré para desarrollar y levantar la infraestructura de la plataforma desde sus inicios. Implementamos individualmente y en equipo muchas funcionalidades nuevas a la plataforma."
+    },
+    "ivory": {
+      "company": "THE IVORY",
+      "location": "Concepción, Chile · Remoto",
+      "role": "Practicante de ingeniería",
+      "period": "2019 – 2020",
+      "description": "Comencé como practicante de media jornada mientras cursaba mi último año de Universidad. Durante ese tiempo ayudé a crear plataformas web y aplicaciones móviles para dos proyectos simultáneos."
+    },
+    "ubb": {
+      "company": "Universidad del Bío Bío",
+      "location1": "Chillán, Chile",
+      "role1": "Ayudante de asignatura",
+      "period1": "2019",
+      "role2": "Estudiante en prácticas",
+      "period2": "2018"
+    }
+  },
   "Contact": {
     "title": "Contáctame",
     "subtitle": "Ya sea que tengas una consulta o solo quieras saludar, escríbeme y te responderé lo antes posible.",
@@ -92,6 +143,28 @@
       "message": "Mensaje",
       "submit": "Enviar"
     }
+  },
+  "NotFound": {
+    "title": "Pagina no encontrada",
+    "description": "La pagina que buscas no existe o fue movida.",
+    "backHome": "Volver al inicio"
+  },
+  "Error": {
+    "title": "Algo salio mal",
+    "description": "Ocurrio un error inesperado. Por favor, intenta de nuevo.",
+    "tryAgain": "Intentar de nuevo"
+  },
+  "Header": {
+    "skipToContent": "Ir al contenido"
+  },
+  "LanguageSwitch": {
+    "switchTo": "Cambiar idioma a {label}"
+  },
+  "Loading": {
+    "label": "Cargando"
+  },
+  "Toast": {
+    "close": "Cerrar"
   },
   "Footer": {
     "privacy": "Privacidad"

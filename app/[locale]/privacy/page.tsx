@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PrivacyPage() {
   return (
-    <div className={"mx-auto"}>
+    <main className={"mx-auto"}>
       <div className={"px-4 py-4"}>
         <h1 className={"text-2xl"}>Privacy</h1>
         <h2 className={"text-xl"}>Analytics</h2>
@@ -18,6 +18,8 @@ export default function PrivacyPage() {
           uses your data, visit the Microsoft{" "}
           <Link
             href={"https://privacy.microsoft.com/privacystatement"}
+            target="_blank"
+            rel="noopener noreferrer"
             className={"text-blue-500 underline"}
           >
             Privacy Statement
@@ -25,6 +27,6 @@ export default function PrivacyPage() {
           .
         </p>
       </div>
-    </div>
+    </main>
   );
 }

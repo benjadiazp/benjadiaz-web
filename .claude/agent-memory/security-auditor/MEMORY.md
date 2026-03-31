@@ -1,0 +1,1 @@
+- [Security audit baseline](audit_baseline_2026-03.md) -- Key findings from March 2026 comprehensive audit

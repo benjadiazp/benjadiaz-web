@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 
+const isSafeUrl = (url: string) =>
+  /^https?:\/\//.test(url) || /^mailto:/.test(url);
+
 const ExternalLink = ({
   href,
   title,
@@ -16,16 +19,19 @@ const ExternalLink = ({
   imgSrc?: string;
   darkImgSrc?: string;
 }) => {
+  if (!isSafeUrl(href)) return null;
   return (
     <Link
       href={href}
       target={"_blank"}
+      rel="noopener noreferrer"
+      aria-label={`${title} (opens in new tab)`}
       className={
-        "flex items-center gap-2 rounded-lg border-2 border-transparent border-opacity-60 px-2 py-2 hover:border-red-500 hover:shadow-md  md:px-2"
+        "flex items-center gap-2 rounded-xl border border-gray-200/70 bg-white/60 px-3 py-3 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20"
       }
     >
       {imgSrc && (
-        <div className={"relative h-6 w-8 md:h-8 md:w-10"}>
+        <div className={"relative h-8 w-10 md:h-10 md:w-12"}>
           <Image
             src={imgSrc}
             alt={`${title} logo`}
@@ -38,7 +44,7 @@ const ExternalLink = ({
           {darkImgSrc && (
             <Image
               src={darkImgSrc}
-              alt={`${title} logo`}
+              alt=""
               fill={true}
               sizes={"40px"}
               className={`hidden h-full w-full object-contain dark:block`}
@@ -48,7 +54,7 @@ const ExternalLink = ({
       )}
       <div>
         <span className={"font-mono font-bold"}>
-          {title} <ArrowTopRightOnSquareIcon className={"inline h-3"} />
+          {title} <ArrowTopRightOnSquareIcon aria-hidden="true" className={"inline h-3"} />
         </span>
         <p className={"font-mono text-sm"}>{subtitle}</p>
       </div>
@@ -59,7 +65,7 @@ const ExternalLink = ({
 export default function LinksList() {
   const t = useTranslations("Links");
   return (
-    <ul className={"flex flex-wrap items-center justify-center gap-2 md:gap-4"}>
+    <ul className={"flex flex-wrap items-center justify-center gap-3 md:gap-4"}>
       <li>
         <ExternalLink
           href={t("githubUrl")}

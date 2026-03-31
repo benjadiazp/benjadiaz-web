@@ -1,9 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
-import { useToast } from "@/components/ui/use-toast";
-import { defaultLocale, locales } from "@/i18n-constants";
-import { useLocale } from "next-intl";
+
+const subscribe = () => () => {};
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export const ThemeSwitch = ({
   labels,
@@ -13,48 +14,22 @@ export const ThemeSwitch = ({
     dark: string;
   };
 }) => {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const { theme, setTheme } = useTheme();
-  const { toast } = useToast();
-  const currentLocale = useLocale();
-
-  useEffect(() => {
-    setMounted(true);
-    /*
-                const browserLang = navigator.language.split("-")[0];
-                let detectedLocale = defaultLocale;
-            
-                switch (browserLang) {
-                  case "es":
-                    detectedLocale = "es-CL";
-                    break;
-                  case "en":
-                    detectedLocale = "en-US";
-                    break;
-                  default:
-                    detectedLocale = defaultLocale;
-                }
-            
-                if (locales.includes(detectedLocale) && currentLocale !== detectedLocale) {
-                  toast({
-                    title: "Recomendación",
-                    description: "Quizás quieras cambiar de idioma.",
-                  });
-                }
-                
-                 */
-  }, []);
 
   if (!mounted) {
-    return <span>loading...</span>;
+    return <span role="status">loading...</span>;
   }
 
   return (
     <button
-      className={`rounded-2xl px-4 py-2 font-mono text-xs font-medium hover:underline sm:text-sm ${
-        theme === "light" ? "" : ""
-      }`}
+      className="rounded-2xl px-4 py-2 font-mono text-xs font-medium hover:underline sm:text-sm"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      aria-label={
+        theme === "light"
+          ? labels?.dark ?? "Switch to dark mode"
+          : labels?.light ?? "Switch to light mode"
+      }
     >
       {theme === "light" ? labels?.dark ?? "dark" : labels?.light ?? "light"}
     </button>

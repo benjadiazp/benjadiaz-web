@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "next-devtools": {
+      "_comment": "On Windows use: \"cmd /c npx\", on Mac/Linux use: \"npx\"",
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    }
+  }
+}

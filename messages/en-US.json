@@ -2,7 +2,7 @@
   "Home": {
     "title": "Benjamín Díaz",
     "subtitle": "Software Engineer",
-    "description": "Full-stack software developer based in Chile 🇨🇱.Passionate about building software and using technology creatively ❤️🐧🐻‍.",
+    "description": "Software Engineer based in Chile 🇨🇱. Passionate about building software and using technology creatively ❤️🐧🐻‍.",
     "moreInfo": "More info 👇"
   },
   "Links": {
@@ -31,14 +31,16 @@
   "Navigation": {
     "home": "Home",
     "about": "About me",
+    "experience": "Experience",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaLabel": "Main navigation"
   },
   "Toggles": {
     "dark": "Dark mode 🌙",
     "light": "Light mode 🌞",
-    "english": "EN 🇺🇸",
-    "spanish": "ES 🇨🇱"
+    "english": "EN",
+    "spanish": "ES"
   },
   "Projects": {
     "title": "Projects",
@@ -82,6 +84,55 @@
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }
   },
+  "Certificates": {
+    "title": "Certificates",
+    "seeMore": "See more ({count})",
+    "seeLess": "See less"
+  },
+  "WorkHistory": {
+    "title": "Experience",
+    "seeMore": "See more ({count})",
+    "seeLess": "See less",
+    "now": "now",
+    "current": "Current",
+    "microsoft": {
+      "company": "Microsoft",
+      "location": "Chile · Remote",
+      "role2": "Software Engineer II",
+      "period2": "2025 – Present",
+      "role1": "Software Engineer",
+      "period1": "2024 – 2025"
+    },
+    "insideSecurity": {
+      "company": "Inside Security",
+      "location": "Chile · Remote",
+      "role": "Full Stack Engineer",
+      "period": "2024",
+      "description": "Software development for Inside Security's application factory. Implementation of best practices and design and architecture patterns in software repositories. Secure software development."
+    },
+    "drizip": {
+      "company": "Drizip",
+      "location": "Santiago, Chile · Remote",
+      "role": "Software Engineer",
+      "period": "2020 – 2023",
+      "description": "As a software engineer at Drizip, I helped develop and build the platform's infrastructure from its early stages. Over the years, I individually and as a team implemented many new features for the platform."
+    },
+    "ivory": {
+      "company": "THE IVORY",
+      "location": "Concepción, Chile · Remote",
+      "role": "Engineering Intern",
+      "period": "2019 – 2020",
+      "description": "I started as a part-time intern during my last year of university. During that time I helped create web platforms and mobile applications for two simultaneous projects."
+    },
+    "ubb": {
+      "company": "Universidad del Bío Bío",
+      "location1": "Chillán, Chile",
+      "role1": "Teaching Assistant",
+      "period1": "2019",
+      "role2": "Intern",
+      "period2": "2018"
+    }
+  },
   "Contact": {
     "title": "Contact me",
     "subtitle": "Feel free to contact me if you want to ask me anything or just to say hi.",
@@ -93,7 +144,29 @@
       "submit": "Send"
     }
   },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Go back home"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "tryAgain": "Try again"
+  },
+  "Header": {
+    "skipToContent": "Skip to content"
+  },
+  "LanguageSwitch": {
+    "switchTo": "Switch language to {label}"
+  },
+  "Loading": {
+    "label": "Loading"
+  },
+  "Toast": {
+    "close": "Close"
+  },
   "Footer": {
-    "privacy": "Privacidad"
+    "privacy": "Privacy"
   }
 }
