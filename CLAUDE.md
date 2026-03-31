@@ -141,8 +141,13 @@ Tests run on Chromium only, single worker, against `http://localhost:3111`.
 ## Conventions
 
 - **Path aliases:** `@/*` maps to project root (e.g., `@/components/Header`, `@/lib/utils`)
+- **Navigation imports:** Always import `Link`, `useRouter`, `usePathname`, `redirect` from `@/navigation` (not `next/link` or `next/navigation`) to preserve locale context. Some components currently use `next/link` with manual base-path prefixing — prefer `@/navigation` for new code
 - **Client components:** Marked with `"use client"` directive — pages and interactive components are client-side
 - **Static generation:** `generateStaticParams()` in layout pre-generates locale variants
 - **Component pattern:** Feature components are self-contained in `components/` — they call `useTranslations()` internally
+- **Shared card styles:** Use `cardBase` and `cardHover` from `@/lib/styles` for card surfaces — don't inline these classes
 - **Icons:** Lucide React (`lucide-react`)
-- **No test framework** beyond Playwright e2e; no unit tests configured
+- **Accessibility:** Sections have `id` + `aria-labelledby` pointing to their heading. `<main>` uses `id="main-content"`. Header includes a skip-to-content link. External links include `(opens in new tab)` in `aria-label`. Decorative icons use `aria-hidden="true"`
+- **Adding a page:** Create `app/[locale]/new-page/page.tsx`, add translation keys to both message files, update `app/sitemap.ts` manually
+- **Static data:** Work history and certificates are hardcoded arrays in their component files — only labels/strings come from translation keys
+- **No unit test framework** beyond Playwright e2e
