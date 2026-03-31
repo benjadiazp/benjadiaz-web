@@ -14,13 +14,13 @@ export default function Header() {
     >
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-md dark:focus:bg-slate-800"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-md dark:focus:bg-gray-900"
       >
         {t("skipToContent")}
       </a>
       <div
         className={
-          "mx-auto flex w-full flex-col flex-wrap items-center justify-center justify-center gap-2 px-2 py-2 sm:max-w-screen-2xl  sm:gap-4 sm:px-4  sm:py-4 md:flex-row md:justify-between"
+          "mx-auto flex w-full flex-col flex-wrap items-center justify-center gap-2 px-2 py-2 sm:max-w-screen-2xl sm:gap-4 sm:px-4 sm:py-4 md:flex-row md:justify-between"
         }
       >
         <Toggles />

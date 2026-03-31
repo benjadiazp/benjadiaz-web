@@ -1,7 +1,9 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
+import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { cardBase, cardHover } from "@/lib/styles";
 
 const isSafeUrl = (url: string) =>
   /^https?:\/\//.test(url) || /^mailto:/.test(url);
@@ -26,9 +28,7 @@ const ExternalLink = ({
       target={"_blank"}
       rel="noopener noreferrer"
       aria-label={`${title} (opens in new tab)`}
-      className={
-        "flex items-center gap-2 rounded-xl border border-gray-200/70 bg-white/60 px-3 py-3 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20"
-      }
+      className={cn(cardBase, cardHover, "flex items-center gap-2 px-3 py-3 hover:-translate-y-0.5")}
     >
       {imgSrc && (
         <div className={"relative h-8 w-10 md:h-10 md:w-12"}>
@@ -54,7 +54,7 @@ const ExternalLink = ({
       )}
       <div>
         <span className={"font-mono font-bold"}>
-          {title} <ArrowTopRightOnSquareIcon aria-hidden="true" className={"inline h-3"} />
+          {title} <ArrowUpRight aria-hidden="true" className={"inline h-3.5 w-3.5"} />
         </span>
         <p className={"font-mono text-sm"}>{subtitle}</p>
       </div>

@@ -31,7 +31,18 @@ export default function Home() {
               {t("subtitle")}
             </h2>
             <p className={"animate-fade-in-up stagger-2 mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"}>
-              {t("description")}
+              {t.rich("description", {
+                microsoft: (chunks) => (
+                  <a
+                    href="https://www.microsoft.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground underline decoration-orange-500/50 underline-offset-2 transition-colors hover:text-orange-500 dark:hover:text-orange-400"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
             <Link
               href={`${base}/about`}

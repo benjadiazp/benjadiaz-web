@@ -1,18 +1,12 @@
 import Image from "next/image";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
+import { badgeOrange, cardBase, cardHover } from "@/lib/styles";
 
 const Tag = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <span
-      className={
-        "rounded-md border border-gray-200/80 bg-gray-50/80 px-2 py-0.5 font-mono text-[11px] font-medium text-gray-600 dark:border-gray-600/50 dark:bg-gray-800/50 dark:text-gray-400"
-      }
-    >
-      {children}
-    </span>
-  );
+  return <span className={badgeOrange}>{children}</span>;
 };
 
 const Project = ({
@@ -33,11 +27,7 @@ const Project = ({
   tags?: string[];
 }) => {
   return (
-    <div
-      className={
-        "group rounded-xl border border-gray-200/70 bg-white/60 p-5 shadow-sm backdrop-blur-sm transition-all hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20"
-      }
-    >
+    <div className={cn(cardBase, cardHover, "group p-5")}>
       <div
         className={
           "flex w-full flex-col justify-evenly gap-4 sm:flex-row even:sm:flex-row-reverse"
@@ -65,7 +55,7 @@ const Project = ({
                 "inline-flex items-center gap-1.5 rounded-md border border-orange-200/80 bg-orange-50/80 px-3 py-1.5 font-mono text-sm font-semibold text-orange-600 transition-all hover:bg-orange-100 hover:shadow-sm dark:border-orange-500/25 dark:bg-orange-500/10 dark:text-orange-400 dark:hover:bg-orange-500/20"
               }
             >
-              {linkLabel} <ArrowTopRightOnSquareIcon aria-hidden="true" className={"inline h-3"} />
+              {linkLabel} <ArrowUpRight aria-hidden="true" className={"inline h-3.5 w-3.5"} />
             </span>
           </Link>
           {description.map((paragraph: string, idx: number) => (

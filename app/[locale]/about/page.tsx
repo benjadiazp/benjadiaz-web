@@ -8,6 +8,8 @@ import Skills from "@/components/Skills";
 import WorkHistory from "@/components/WorkHistory";
 import Certificates from "@/components/Certificates";
 import { ArrowLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { cardBase, cardHover } from "@/lib/styles";
 
 export default function AboutPage() {
   const t = useTranslations("About");
@@ -30,7 +32,7 @@ export default function AboutPage() {
         </h1>
 
         <section className="mt-10">
-          <div className="rounded-xl border border-gray-200/70 bg-white/60 px-6 py-6 shadow-sm backdrop-blur-sm dark:border-gray-800/70 dark:bg-gray-900/50">
+          <div className={cn(cardBase, "px-6 py-6")}>
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               {t("bio.p1")}
             </p>
@@ -52,7 +54,7 @@ export default function AboutPage() {
               (key) => (
                 <div
                   key={key}
-                  className="rounded-xl border border-gray-200/70 bg-white/60 px-5 py-4 shadow-sm backdrop-blur-sm transition-all hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20"
+                  className={cn(cardBase, cardHover, "px-5 py-4")}
                 >
                   <h3 className="font-mono text-sm font-bold">
                     <span className="text-gradient-accent">

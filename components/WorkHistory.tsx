@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { badgeOrange, cardBase, cardHover, expandButton } from "@/lib/styles";
 
 type Role = {
   titleKey: string;
@@ -145,7 +147,7 @@ export default function WorkHistory() {
               </div>
 
               {/* Card */}
-              <div className="mb-1 flex min-h-[80px] flex-1 overflow-hidden rounded-xl border border-gray-200/70 bg-white/60 shadow-sm backdrop-blur-sm transition-all hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20">
+              <div className={cn(cardBase, cardHover, "mb-1 flex min-h-[80px] flex-1 overflow-hidden")}>
                 {/* Logo panel */}
                 {job.logo && (
                   <div className={`flex w-20 flex-shrink-0 items-center justify-center border-r border-gray-200/70 sm:w-24 ${typeof job.logo === "string" ? "bg-white dark:border-gray-800/70 dark:bg-white" : "bg-gray-50 dark:border-gray-800/70 dark:bg-gray-900/80"}`}>
@@ -179,7 +181,7 @@ export default function WorkHistory() {
                     )}
 
                     {isFirst && (
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-[11px] font-medium text-green-700 dark:border-green-500/20 dark:bg-green-500/10 dark:text-green-400">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-2xs font-medium text-green-700 dark:border-green-500/20 dark:bg-green-500/10 dark:text-green-400">
                         <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 dark:bg-green-400" />
                         {t("current")}
                       </span>
@@ -187,7 +189,7 @@ export default function WorkHistory() {
                   </div>
 
                   {job.locationKey && (
-                    <p className="mt-0.5 font-mono text-xs text-gray-500 dark:text-gray-500">
+                    <p className="mt-0.5 font-mono text-xs text-gray-500 dark:text-gray-400">
                       {t(job.locationKey)}
                     </p>
                   )}
@@ -195,7 +197,7 @@ export default function WorkHistory() {
                   <div className="mt-2.5 space-y-1.5">
                     {job.roles.map((role, rIdx) => (
                       <div key={rIdx} className="flex flex-wrap items-center gap-2">
-                        <span className="inline-flex items-center rounded-md border border-orange-200/80 bg-orange-50/80 px-2 py-0.5 font-mono text-[11px] font-semibold text-orange-600 dark:border-orange-500/25 dark:bg-orange-500/10 dark:text-orange-400">
+                        <span className={badgeOrange}>
                           {t(role.periodKey)}
                         </span>
                         <span className="font-mono text-sm text-gray-700 dark:text-gray-300">
@@ -214,7 +216,7 @@ export default function WorkHistory() {
       {remaining > 0 && (
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-4 flex w-full items-center justify-center gap-1.5 py-2 font-mono text-sm text-gray-500 transition-colors hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400"
+          className={expandButton}
         >
           {expanded ? (
             <>

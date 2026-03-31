@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { badgeOrange, cardBase, cardHover, expandButton } from "@/lib/styles";
 
 type Certificate = {
   name: string;
@@ -45,7 +47,7 @@ export default function Certificates() {
         {visible.map((cert, idx) => (
           <div
             key={idx}
-            className="rounded-xl border border-gray-200/70 bg-white/60 px-4 py-3 shadow-sm backdrop-blur-sm transition-all hover:border-orange-200 hover:shadow-md dark:border-gray-800/70 dark:bg-gray-900/50 dark:hover:border-orange-500/20"
+            className={cn(cardBase, cardHover, "px-4 py-3")}
           >
             <h3 className="font-mono text-sm font-bold">
               <span className="text-gradient-accent">
@@ -53,7 +55,7 @@ export default function Certificates() {
               </span>
             </h3>
             <div className="mt-1.5 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-md border border-orange-200/80 bg-orange-50/80 px-2 py-0.5 font-mono text-[11px] font-semibold text-orange-600 dark:border-orange-500/25 dark:bg-orange-500/10 dark:text-orange-400">
+              <span className={badgeOrange}>
                 {cert.year}
               </span>
               <span className="font-mono text-sm text-gray-700 dark:text-gray-300">
@@ -67,7 +69,7 @@ export default function Certificates() {
       {remaining > 0 && (
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-4 flex w-full items-center justify-center gap-1.5 py-2 font-mono text-sm text-gray-500 transition-colors hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400"
+          className={expandButton}
         >
           {expanded ? (
             <>

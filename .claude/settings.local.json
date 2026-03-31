@@ -6,8 +6,7 @@
       "Bash(curl -s http://localhost:3111/en-US)",
       "Bash(curl -v http://localhost:3111/)",
       "Bash(curl -s http://localhost:3111/es-CL)",
-      "Bash(bunx playwright:*)",
-      "Bash(git log:*)"
+      "Bash(bunx playwright:*)"
     ]
   },
   "enabledMcpjsonServers": [
