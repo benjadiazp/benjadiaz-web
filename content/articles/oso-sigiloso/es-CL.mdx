@@ -1,0 +1,61 @@
+Siempre me han gustado los osos. Así que cuando tuve que elegir el tema de mi proyecto de investigación de pregrado en la Universidad del Bío-Bío, pensé — ¿por qué no hacer un juego sobre uno?
+
+La pregunta de investigación era sorprendentemente práctica: ¿cuáles son los pasos mínimos que necesita un desarrollador de software para crear un videojuego 3D desde cero? Necesitaba un prototipo que demostrara que la guía que iba a escribir realmente funcionaba. Podría haber hecho cualquier cosa. Elegí un oso escondiéndose en un laboratorio secreto. Cero arrepentimientos.
+
+## La Investigación (Semanas Enteras)
+
+Antes de tocar un solo polígono, pasé semanas leyendo papers académicos, charlas de la GDC, documentación oficial de motores, libros de arte 3D — todo lo que me pudiera ayudar a mapear el pipeline completo de desarrollo de videojuegos. Te sorprendería la cantidad de papers que existen sobre procesos de desarrollo de videojuegos. También te sorprendería lo pocos que realmente sirven cuando estás sentado frente a una escena vacía de Unity.
+
+Todo eso se destiló en una guía escrita que cubre el pipeline completo — concepto, pre-producción, arte 3D, audio, programación, IA, distribución. La guía era el entregable real. El juego existía para demostrar que no era pura teoría.
+
+Semanas de investigación. Un fin de semana para hacer el juego.
+
+## El Concepto
+
+El diseño original tenía dos protagonistas: un **oso** y una **fruta** consciente con poderes telepáticos. Sí, una fruta. Con telepatía. La idea era que el jugador controla a la fruta, la fruta le transmite instrucciones al oso, y ninguno puede funcionar solo — el oso no puede orientarse sin la guía de la fruta, y la fruta no puede moverse sin que el oso la lleve. Juntos escapan de un laboratorio lleno de robots guardianes y cámaras de vigilancia.
+
+Me encantó este concepto. Era raro, era divertido, y me daba la excusa perfecta para poner a un oso al centro de todo.
+
+El alcance, como siempre, tenía otros planes. El juego final se simplificó a solo el oso. La fruta sigue existiendo en algún documento de diseño en mi disco duro, completamente descrita y completamente sin implementar. Quizás algún día.
+
+El juego es gratuito — puedes probarlo ahora mismo en itch.io.
+
+<LinkCard href="https://benjadiaz.itch.io/oso-sigiloso" title="Oso Sigiloso" description="Juega gratis en itch.io" />
+
+<VideoPreview src="https://www.youtube.com/shorts/VrsjdOIacMo" title="Haciendo Oso Sigiloso" />
+
+## Haciendo al Oso
+
+Cada asset del juego salió de mis propias manos. El oso fue la pieza más elaborada — y honestamente, la más gratificante.
+
+Empecé con fotos de referencia de osos reales en Pexels y dibujé un concepto ortográfico en una tableta digital. No buscaba realismo. Quería algo estilizado, medio redondito, el tipo de oso al que le harías barra. De ahí modelé en **Modo Indie**, partiendo de un cubo y moviendo vértices hasta que algo con forma de oso empezó a aparecer. El modelo final quedó en 5.048 polígonos con topología limpia de quads — importante si no quieres que tu oso colapse sobre sí mismo cuando intente caminar.
+
+La textura fue en **Substance Painter**, pintando directo sobre el modelo 3D en tiempo real. El rigging y la animación pasaron por **Akeytsu** — colocar el esqueleto, configurar los objetivos de IK, pintar los pesos de skinning y armar un ciclo de caminata con 7 keyframes.
+
+Ver al oso caminar por primera vez fue uno de esos momentos. Semanas leyendo papers y escribiendo documentación, y de repente — un oso, caminando, porque yo lo construí. Cada articulación, cada peso, cada keyframe. Es difícil explicar esa sensación a alguien que no la ha vivido. Algo que no existía ahora se mueve, y se mueve porque tú lo hiciste.
+
+## El Resto del Mundo
+
+Los robots guardianes corren sobre una máquina de estados finitos de tres estados — patrullar, buscar, perseguir — con raycasts y un cono de visión de 70° para la detección. Si el ángulo hacia el jugador está dentro del rango y nada bloquea el rayo, el robot te ve. Te pillan y el nivel se reinicia.
+
+Las cámaras de vigilancia fueron más entretenidas de diseñar. En vez de raycasts, usan trigger colliders. Cuando caminas dentro del campo de visión de una cámara, dispara un evento de C# al que todos los robots de la escena están suscritos. Sin referencias directas entre cámaras y robots — solo un broadcast que dice "intruso acá". El shader de la cámara cambia de color en tiempo real: verde cuando está tranquila, amarillo cuando sospecha, rojo cuando hay alerta.
+
+Para el audio, compuse la música en **GarageBand** y grabé los efectos de sonido con una **Zoom H4n Pro** usando técnicas de Foley — generando sonidos físicamente en una sala, como se hace en el cine. Pasos, zumbidos mecánicos, ambientes. Todo exportado en WAV.
+
+## El Fin de Semana
+
+Toda la investigación y documentación ocurrió en semanas. Pero el desarrollo real — modelado, texturizado, rigging, animación, programación, audio, generar el ejecutable — ocurrió en un solo fin de semana.
+
+No lo recomendaría como flujo de trabajo. Pero el punto entero de la guía era demostrar que el proceso de desarrollo de videojuegos es accesible, que no necesitas un estudio ni un equipo ni años de experiencia. Ese fin de semana lo probó de una forma que ninguna cantidad de escritura académica podría.
+
+## Lo Que Significó
+
+Este fue mi proyecto final de pregrado. Llevar algo desde una escena vacía de Unity hasta un ejecutable jugable — con un personaje que yo diseñé, modelé, rigueé y animé, música que compuse, sonidos que grabé — se sintió como un cierre apropiado para ese capítulo.
+
+Y simplemente me hizo feliz. Es un juego sobre un oso. Se lo puedes mostrar a cualquier persona y lo entiende al toque. Eso me importaba.
+
+He trabajado en cosas más complejas técnicamente desde entonces. Pero Oso Sigiloso es el proyecto al que vuelvo cuando quiero recordar por qué empecé a construir cosas.
+
+<Callout type="info">
+El código fuente completo está en GitHub. Corre en Unity 2019 o posterior.
+</Callout>

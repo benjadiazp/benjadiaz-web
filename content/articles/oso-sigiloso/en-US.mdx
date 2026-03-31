@@ -1,0 +1,61 @@
+I've always loved bears. So when I had to pick a subject for my undergraduate research project at Universidad del Bío-Bío, I figured — why not make a game about one?
+
+The research question was surprisingly practical: what are the minimum steps a software developer needs to build a 3D game from scratch? I needed a prototype to prove the guide I'd write actually worked. I could have made anything. I chose a bear sneaking through a secret laboratory. No regrets.
+
+## The Research (Weeks of It)
+
+Before I touched a single polygon, I spent weeks reading academic papers, GDC talks, official engine docs, books on 3D art — anything that could help me map out the full game development pipeline. You'd be surprised how many papers exist about video game development processes. You'd also be surprised how few of them are actually useful when you're sitting in front of an empty Unity scene.
+
+All of that distilled into a written guide covering the complete pipeline — concept, pre-production, 3D art, audio, programming, AI, distribution. The guide was the real deliverable. The game was there to prove it wasn't just theory.
+
+Weeks of research. One weekend to build the game.
+
+## The Concept
+
+The original design had two protagonists: a **bear** and a sentient **fruit** with telepathic powers. Yes, a fruit. With telepathy. The idea was that the player controls the fruit, the fruit relays instructions to the bear, and neither can function alone — the bear can't navigate without the fruit's guidance, and the fruit can't move without the bear carrying it. Together they escape a laboratory full of robot guards and surveillance cameras.
+
+I loved this concept. It was weird, it was fun, and it gave me an excuse to put a bear front and center.
+
+Scope, as it does, had other plans. The final game simplified to just the bear. The fruit still exists in a design document on my hard drive somewhere, fully described and completely unimplemented. Maybe one day.
+
+The game is free to play — you can try it right now on itch.io.
+
+<LinkCard href="https://benjadiaz.itch.io/oso-sigiloso" title="Oso Sigiloso" description="Play for free on itch.io" />
+
+<VideoPreview src="https://www.youtube.com/shorts/VrsjdOIacMo" title="Making Oso Sigiloso" />
+
+## Making the Bear
+
+Every asset in the game came from my own hands. The bear was the most involved piece — and honestly, the most rewarding.
+
+I started with reference photos of real bears from Pexels and drew an orthographic concept on a digital tablet. I wasn't going for realism. I wanted something stylized, a little round, the kind of bear you'd root for. From there I modeled it in **Modo Indie**, starting from a cube and pushing vertices around until a bear-shaped thing emerged. The final model landed at 5,048 polygons with clean quad topology — important if you don't want your bear to collapse into itself when it tries to walk.
+
+Texturing happened in **Substance Painter**, painting directly onto the 3D model in real time. Rigging and animation went through **Akeytsu** — placing the skeleton, setting up IK targets, painting skin weights, and building a walk cycle out of 7 keyframes.
+
+Seeing the bear walk for the first time was one of those moments. Weeks of reading papers and writing documentation, and then — a bear, walking, because I built it. Every joint, every weight, every keyframe. It's hard to explain that feeling to someone who hasn't experienced it. Something that didn't exist now moves, and it moves because of you.
+
+## The Rest of the World
+
+The robot guards run on a three-state finite state machine — patrol, search, chase — with raycasts and a 70° vision cone for detection. If the angle to the player is within range and nothing blocks the ray, the robot spots you. Get caught and the level resets.
+
+The surveillance cameras were more fun to design. Instead of raycasts, they use trigger colliders. When you walk into a camera's field of view, it fires a C# event that every robot in the scene is subscribed to. No direct references between cameras and robots — just a broadcast that says "intruder here." The camera shader changes color in real time: green when clear, yellow when suspicious, red when alarmed.
+
+For audio, I composed the music in **GarageBand** and recorded sound effects with a **Zoom H4n Pro** using Foley techniques — physically making sounds in a room, the way they do it in film. Footsteps, mechanical whirs, ambient hums. All exported as WAV.
+
+## The Weekend
+
+All the research and documentation happened over weeks. But the actual development — modeling, texturing, rigging, animating, programming, audio, building the executable — happened in a single weekend.
+
+I wouldn't recommend it as a workflow. But the whole point of the guide was to show that the game development process is approachable, that you don't need a studio or a team or years of experience. That weekend proved it in a way no amount of academic writing could.
+
+## What It Meant
+
+This was my final undergraduate project. Carrying something from a blank Unity scene to a playable build — with a character I designed, modeled, rigged, and animated, music I composed, sounds I recorded — felt like a proper send-off to that chapter.
+
+It also just made me happy. It's a game about a bear. You can show it to anyone and they immediately get it. That mattered to me.
+
+I've worked on more technically complex things since then. But Oso Sigiloso is the project I come back to when I want to remember why I started making things in the first place.
+
+<Callout type="info">
+The full source code is on GitHub. It runs on Unity 2019 or later.
+</Callout>
