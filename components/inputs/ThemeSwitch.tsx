@@ -1,6 +1,7 @@
 "use client";
 import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 const subscribe = () => () => {};
 const getSnapshot = () => true;
@@ -23,15 +24,20 @@ export const ThemeSwitch = ({
 
   return (
     <button
-      className="rounded-2xl px-4 py-2 font-mono text-xs font-medium hover:underline sm:text-sm"
+      className="rounded-md p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-orange-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-orange-400"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label={
         theme === "light"
           ? labels?.dark ?? "Switch to dark mode"
           : labels?.light ?? "Switch to light mode"
       }
+      aria-pressed={theme === "dark"}
     >
-      {theme === "light" ? labels?.dark ?? "dark" : labels?.light ?? "light"}
+      {theme === "light" ? (
+        <Moon className="h-4 w-4" aria-hidden="true" />
+      ) : (
+        <Sun className="h-4 w-4" aria-hidden="true" />
+      )}
     </button>
   );
 };

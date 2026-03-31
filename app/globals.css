@@ -75,6 +75,13 @@
         @apply bg-background text-foreground;
     }
 
+    /* Global visible focus ring for keyboard navigation */
+    :where(a, button, [tabindex]):focus-visible {
+        outline: 2px solid theme('colors.orange.500');
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
     .background-animate {
         background-size: 200%;
     }
@@ -144,6 +151,129 @@
         .stagger-2 { animation-delay: 0.2s; }
         .stagger-3 { animation-delay: 0.3s; }
         .stagger-4 { animation-delay: 0.4s; }
+    }
+
+    /* ── Prose (MDX content) typography overrides ─────────────────────────── */
+    .prose {
+        --tw-prose-headings: theme('colors.foreground');
+        --tw-prose-links: theme('colors.orange.500');
+        --tw-prose-code: theme('colors.orange.500');
+        --tw-prose-pre-bg: transparent;
+        --tw-prose-pre-code: inherit;
+        font-family: theme('fontFamily.mono');
+    }
+
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4 {
+        font-family: theme('fontFamily.mono');
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        scroll-margin-top: 5rem;
+    }
+
+    .prose h1 { @apply text-3xl; }
+    .prose h2 { @apply text-2xl border-b border-border pb-2; }
+    .prose h3 { @apply text-xl; }
+    .prose h4 { @apply text-lg; }
+
+    .prose a {
+        @apply text-orange-500 underline-offset-4 decoration-orange-500/40 hover:decoration-orange-500 transition-colors;
+    }
+
+    .prose strong {
+        @apply font-bold text-foreground;
+    }
+
+    .prose blockquote {
+        @apply border-l-4 border-orange-500/60 not-italic text-muted-foreground;
+    }
+
+    .prose blockquote p::before,
+    .prose blockquote p::after {
+        content: '';
+    }
+
+    /* Inline code (not inside a pre block) */
+    .prose :not(pre) > code {
+        @apply rounded px-1.5 py-0.5 text-orange-500 bg-orange-500/10 text-[0.85em] font-mono;
+        font-weight: 500;
+    }
+
+    .prose :not(pre) > code::before,
+    .prose :not(pre) > code::after {
+        content: '';
+    }
+
+    /* ── Syntax highlighting (rehype-pretty-code / Shiki) ─────────────────── */
+    .prose pre {
+        @apply rounded-xl border border-border bg-muted/50 px-0 py-0 overflow-x-auto;
+        backdrop-filter: blur(4px);
+    }
+
+    /* File name / title bar */
+    [data-rehype-pretty-code-title] {
+        @apply rounded-t-xl border border-b-0 border-border bg-muted px-4 py-2 font-mono text-xs text-muted-foreground;
+    }
+
+    [data-rehype-pretty-code-title] + pre {
+        @apply rounded-t-none;
+    }
+
+    /* Caption below a code block */
+    [data-rehype-pretty-code-caption] {
+        @apply border border-t-0 border-border rounded-b-xl px-4 py-2 font-mono text-xs text-muted-foreground;
+    }
+
+    /* The <code> inside <pre> — Shiki outputs spans with inline color */
+    .prose pre > code {
+        @apply grid text-sm leading-relaxed;
+        background: transparent;
+        padding: 1rem 0;
+    }
+
+    .prose pre > code::before,
+    .prose pre > code::after {
+        content: '';
+    }
+
+    /* Each line */
+    .prose pre > code [data-line] {
+        @apply px-5 py-0.5;
+        min-height: 1.6em;
+    }
+
+    /* Highlighted lines */
+    .prose pre > code [data-highlighted-line] {
+        @apply bg-orange-500/10 border-l-2 border-orange-500;
+        padding-left: calc(1.25rem - 2px);
+    }
+
+    /* Highlighted words / characters */
+    .prose pre > code [data-highlighted-chars] {
+        @apply rounded bg-orange-500/20 px-1;
+    }
+
+    /* Line numbers (when enabled via showLineNumbers) */
+    .prose pre > code[data-line-numbers] {
+        counter-reset: line;
+    }
+
+    .prose pre > code[data-line-numbers] > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+        @apply mr-6 inline-block w-4 text-right text-muted-foreground/40 select-none;
+    }
+
+    /* Language badge on the code block */
+    [data-rehype-pretty-code-figure] {
+        @apply relative my-6;
+    }
+
+    /* Copy button (rendered by some wrappers) — basic reset */
+    [data-rehype-pretty-code-figure] button {
+        @apply absolute right-3 top-3 rounded border border-border bg-background/80 p-1 text-xs text-muted-foreground backdrop-blur-sm hover:text-foreground transition-colors;
     }
 }
 

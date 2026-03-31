@@ -38,12 +38,12 @@ export default function Certificates() {
   const remaining = certificates.length - INITIAL_COUNT;
 
   return (
-    <div className="w-full">
+    <section className="w-full" aria-labelledby="certificates-heading">
       <h2 id="certificates-heading" className="text-center text-xl font-bold tracking-tight md:text-3xl">
         {t("title")}
       </h2>
 
-      <div className="mt-10 space-y-3">
+      <div id="cert-list" className="mt-10 space-y-3">
         {visible.map((cert, idx) => (
           <div
             key={idx}
@@ -69,19 +69,21 @@ export default function Certificates() {
       {remaining > 0 && (
         <button
           onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          aria-controls="cert-list"
           className={expandButton}
         >
           {expanded ? (
             <>
-              {t("seeLess")} <ChevronUp className="h-4 w-4" />
+              {t("seeLess")} <ChevronUp aria-hidden="true" className="h-4 w-4" />
             </>
           ) : (
             <>
-              {t("seeMore", { count: remaining })} <ChevronDown className="h-4 w-4" />
+              {t("seeMore", { count: remaining })} <ChevronDown aria-hidden="true" className="h-4 w-4" />
             </>
           )}
         </button>
       )}
-    </div>
+    </section>
   );
 }

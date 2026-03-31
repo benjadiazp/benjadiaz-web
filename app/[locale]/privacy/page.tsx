@@ -1,7 +1,32 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { cardBase } from "@/lib/styles";
+import { locales } from "@/i18n/routing";
+import type { Locale } from "@/lib/content-types";
+import { buildAlternates } from "@/lib/seo";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const loc = locale as Locale;
+  return {
+    title: loc === "es-CL" ? "Política de Privacidad" : "Privacy Policy",
+    description:
+      loc === "es-CL"
+        ? "Información sobre cómo recopilamos y usamos datos en benjadiaz.com."
+        : "Information about how we collect and use data on benjadiaz.com.",
+    alternates: buildAlternates("/privacy", loc),
+  };
+}
 
 export default function PrivacyPage() {
   return (
@@ -37,6 +62,7 @@ export default function PrivacyPage() {
               href="https://privacy.microsoft.com/privacystatement"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Microsoft Privacy Statement (opens in new tab)"
               className="text-orange-600 underline decoration-orange-500/50 underline-offset-2 transition-colors hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300"
             >
               Privacy Statement

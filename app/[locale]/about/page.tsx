@@ -9,7 +9,7 @@ import WorkHistory from "@/components/WorkHistory";
 import Certificates from "@/components/Certificates";
 import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { cardBase, cardHover } from "@/lib/styles";
+import { cardBase, cardHover, btnText } from "@/lib/styles";
 
 export default function AboutPage() {
   const t = useTranslations("About");
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <div className="mx-auto w-full max-w-screen-lg px-4 pt-12 sm:px-8 sm:pt-20">
         <Link
           href={`${base}/`}
-          className="inline-flex items-center gap-1.5 font-mono text-sm text-gray-500 transition-colors hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400"
+          className={btnText}
         >
           <ArrowLeft className="h-4 w-4" />
           {t("backHome")}
@@ -31,7 +31,8 @@ export default function AboutPage() {
           {t("title")}
         </h1>
 
-        <section className="mt-10">
+        <section className="mt-10" aria-labelledby="bio-heading">
+          <h2 id="bio-heading" className="sr-only">{t("bio.heading")}</h2>
           <div className={cn(cardBase, "px-6 py-6")}>
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               {t("bio.p1")}
@@ -45,8 +46,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="mt-12">
-          <h2 className="text-center text-xl font-bold tracking-tight md:text-3xl">
+        <section className="mt-12" aria-labelledby="interests-heading">
+          <h2 id="interests-heading" className="text-center text-xl font-bold tracking-tight md:text-3xl">
             {t("interests.title")}
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">

@@ -3,32 +3,37 @@ import {
   MouseEventHandler,
   useTransition,
 } from "react";
+import { Globe } from "lucide-react";
 import { useRouter, usePathname } from "@/navigation";
 import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
 
 const LanguageButton = ({
   locale,
   label,
   switchToLabel,
   onClick,
+  disabled,
 }: {
   locale: string;
   label: string;
   switchToLabel: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 }) => {
   const currentLocale = useLocale();
   return (
     <button
       type="button"
-      className={`hover:underline ${
+      className={`transition-colors hover:text-orange-500 dark:hover:text-orange-400 disabled:opacity-50 ${
         currentLocale === locale
-          ? "font-bold underline underline-offset-4"
+          ? "font-bold text-foreground"
           : "font-normal text-muted-foreground"
       }`}
       onClick={onClick}
       aria-label={switchToLabel}
       aria-pressed={currentLocale === locale}
+      disabled={disabled}
     >
       {label}
     </button>
@@ -53,15 +58,23 @@ export default function LanguageSwitch({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
+  const params = useParams();
 
   function onLanguageSelect(newLanguage: string) {
     startTransition(() => {
-      router.replace(pathname, { locale: newLanguage });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      router.replace({ pathname, params } as any, { locale: newLanguage });
     });
   }
 
   return (
-    <div className="flex items-center gap-1 text-xs sm:text-sm">
+    <div
+      role="group"
+      aria-label="Language selection"
+      aria-busy={isPending}
+      className="flex items-center gap-1.5 text-xs sm:text-sm"
+    >
+      <Globe className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
       <LanguageButton
         locale={"en-US"}
         label={labels?.en ?? "EN"}
@@ -70,8 +83,9 @@ export default function LanguageSwitch({
           e.preventDefault();
           onLanguageSelect("en-US");
         }}
+        disabled={isPending}
       />
-      <span className="text-muted-foreground select-none">/</span>
+      <span aria-hidden="true" className="text-muted-foreground select-none">/</span>
       <LanguageButton
         locale={"es-CL"}
         label={labels?.es ?? "ES"}
@@ -80,6 +94,7 @@ export default function LanguageSwitch({
           e.preventDefault();
           onLanguageSelect("es-CL");
         }}
+        disabled={isPending}
       />
     </div>
   );

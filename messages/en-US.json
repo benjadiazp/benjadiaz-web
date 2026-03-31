@@ -2,8 +2,8 @@
   "Home": {
     "title": "Benjamín Díaz",
     "subtitle": "Software Engineer",
-    "description": "Software Engineer at <microsoft>Microsoft</microsoft>, based in Chile 🇨🇱. Passionate about crafting software, making games, and using technology as a creative medium.",
-    "moreInfo": "More info 👇"
+    "description": "Software Engineer at <microsoft>Microsoft</microsoft>, based in Chile. Passionate about crafting software, making games, and using technology as a creative medium.",
+    "moreInfo": "More info"
   },
   "Links": {
     "github": "Github",
@@ -30,64 +30,58 @@
   },
   "Navigation": {
     "home": "Home",
-    "about": "About me",
+    "about": "About",
     "experience": "Experience",
     "projects": "Projects",
+    "blog": "Blog",
     "contact": "Contact",
     "ariaLabel": "Main navigation"
   },
   "Toggles": {
-    "dark": "Dark mode 🌙",
-    "light": "Light mode 🌞",
+    "dark": "Dark mode",
+    "light": "Light mode",
     "english": "EN",
     "spanish": "ES"
   },
   "Projects": {
     "title": "Projects",
-    "drizip": {
-      "title": "Drizip SpA",
-      "subtitle": "Software Engineer",
-      "period": "2020 - 2023",
-      "description": {
-        "p1": "Drizip is a platform that allows car owners to rent their cars to other people, available in Chile and México.",
-        "p2": "During my time at Drizip I worked on the backend and frontend of the platform and leveraged the infrastructure on AWS."
-      },
-      "imgSrc": "/img/drizip.png",
-      "href": "https://drizip.com",
-      "linkLabel": "drizip.com",
-      "tags": "React, Next.js, TypeScript, Node.js, Express, MongoDB, Meteor, AWS"
-    },
-    "roldic": {
-      "period": "September 2022",
-      "title": "Roldic Commerce SpA",
-      "subtitle": "Proyecto de desarrollo de software",
-      "description": {
-        "p1": "Roldic is a store that sells bicycles and their spare parts and accessories.",
-        "p2": "For this project, I developed a complete E-Commerce platform, including storefront, backoffice and an API that connects everything."
-      },
-      "imgSrc": "/img/roldic.png",
-      "href": "https://roldic.cl",
-      "linkLabel": "roldic.cl",
-      "tags": "React, Next.js, TypeScript, Node.js, NestJS, Express, MongoDB, Segment, AWS, Vercel, MercadoPago, Transbank"
-    },
-    "oso": {
-      "period": "March 2020",
-      "title": "Oso Sigiloso",
-      "subtitle": "Video game",
-      "description": {
-        "p1": "As part of an undergraduate research, I developed a video game to demonstrate a simple process to get started in game development.",
-        "p2": "For this project, I wrote the code and made the music, art and the rest of the assets."
-      },
-      "href": "https://github.com/benjadiazp/OsoSigiloso",
-      "linkLabel": "Source code",
-      "imgSrc": "/img/oso.jpg",
-      "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
-    }
+    "viewAll": "View all projects ({count})",
+    "noResults": "No projects match the selected filters.",
+    "allTags": "All",
+    "filterLabel": "Filter projects by tag",
+    "backToProjects": "Back to projects",
+    "relatedArticles": "Related Articles"
+  },
+  "Blog": {
+    "title": "Blog",
+    "viewAll": "View all posts ({count})",
+    "allTypes": "All",
+    "allTags": "All",
+    "noResults": "No posts match the selected filters.",
+    "filterByType": "Filter by content type",
+    "filterByTag": "Filter by topic",
+    "backToBlog": "Back to blog",
+    "typeBlog": "Articles",
+    "typeVideo": "Videos",
+    "typeReel": "Reels",
+    "typePoc": "Experiments"
+  },
+  "Search": {
+    "title": "Search",
+    "placeholder": "Search...",
+    "noResults": "No results found.",
+    "results": "Search results",
+    "projects": "Projects",
+    "blog": "Blog",
+    "pages": "Pages",
+    "close": "Close search",
+    "hint": "Type to search"
   },
   "About": {
     "title": "About me",
     "backHome": "Back home",
     "bio": {
+      "heading": "Biography",
       "p1": "I'm Benjamín, a Software Engineer based in Chile. I currently work at Microsoft. Before that, I worked at startups and security companies, which gave me a broad perspective on how to build products from scratch and ship them fast.",
       "p2": "I studied Civil Engineering in Computer Science at Universidad del Bío-Bío. Beyond my day job, I'm passionate about using technology creatively — whether that's developing video games, making music, or creating content about software development.",
       "p3": "I believe in building things that matter, writing clean code, and always learning something new. When I'm not coding, you'll find me experimenting with game engines, producing music, or sharing what I learn on YouTube and social media."
@@ -192,7 +186,12 @@
     "tryAgain": "Try again"
   },
   "Header": {
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "siteName": "Benjamín Díaz",
+    "homeLink": "Go to home page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "search": "Search"
   },
   "LanguageSwitch": {
     "switchTo": "Switch language to {label}"

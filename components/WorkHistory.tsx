@@ -109,12 +109,12 @@ export default function WorkHistory() {
   const remaining = jobs.length - INITIAL_COUNT;
 
   return (
-    <div className="w-full">
+    <section className="w-full" aria-labelledby="experience-heading">
       <h2 id="experience-heading" className="text-center text-xl font-bold tracking-tight md:text-3xl">
         {t("title")}
       </h2>
 
-      <div className="mt-10 space-y-6">
+      <div id="work-history-list" className="mt-10 space-y-6">
         {visible.map((job, idx) => {
           const isFirst = idx === 0;
           const isLast = expanded
@@ -124,8 +124,8 @@ export default function WorkHistory() {
 
           return (
             <div key={idx} className="group flex gap-5 sm:gap-6">
-              {/* Timeline column */}
-              <div className="flex flex-shrink-0 flex-col items-center">
+              {/* Timeline column — decorative only */}
+              <div aria-hidden="true" className="flex flex-shrink-0 flex-col items-center">
                 <div
                   className={`z-10 mt-5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 transition-all group-hover:scale-110 ${
                     isFirst
@@ -165,12 +165,13 @@ export default function WorkHistory() {
                         href={job.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${companyName} (opens in new tab)`}
                         className="group/link inline-flex items-center gap-1 font-mono text-base font-bold"
                       >
-                        <span className="text-gradient-accent">
+                        <span className="text-gradient-accent" aria-hidden="true">
                           {companyName}
                         </span>
-                        <ArrowUpRight className="h-3.5 w-3.5 text-orange-400 opacity-60 transition-opacity group-hover/link:opacity-100" />
+                        <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5 text-orange-400 opacity-60 transition-opacity group-hover/link:opacity-100" />
                       </a>
                     ) : (
                       <h3 className="font-mono text-base font-bold">
@@ -216,19 +217,21 @@ export default function WorkHistory() {
       {remaining > 0 && (
         <button
           onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          aria-controls="work-history-list"
           className={expandButton}
         >
           {expanded ? (
             <>
-              {t("seeLess")} <ChevronUp className="h-4 w-4" />
+              {t("seeLess")} <ChevronUp aria-hidden="true" className="h-4 w-4" />
             </>
           ) : (
             <>
-              {t("seeMore", { count: remaining })} <ChevronDown className="h-4 w-4" />
+              {t("seeMore", { count: remaining })} <ChevronDown aria-hidden="true" className="h-4 w-4" />
             </>
           )}
         </button>
       )}
-    </div>
+    </section>
   );
 }

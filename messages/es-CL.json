@@ -2,8 +2,8 @@
   "Home": {
     "title": "Benjamín Díaz",
     "subtitle": "Ingeniero de Software",
-    "description": "Ingeniero de Software en <microsoft>Microsoft</microsoft>, de Chile 🇨🇱. Apasionado por crear software, hacer videojuegos y usar la tecnología como un medio creativo.",
-    "moreInfo": "Más info 👇"
+    "description": "Ingeniero de Software en <microsoft>Microsoft</microsoft>, de Chile. Apasionado por crear software, hacer videojuegos y usar la tecnología como un medio creativo.",
+    "moreInfo": "Más info"
   },
   "Links": {
     "github": "Github",
@@ -33,61 +33,55 @@
     "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
+    "blog": "Blog",
     "contact": "Contacto",
     "ariaLabel": "Navegación principal"
   },
   "Toggles": {
-    "dark": "Modo oscuro 🌙",
-    "light": "Modo claro 🌞",
+    "dark": "Modo oscuro",
+    "light": "Modo claro",
     "english": "EN",
     "spanish": "ES"
   },
   "Projects": {
     "title": "Proyectos",
-    "drizip": {
-      "title": "Drizip SpA",
-      "subtitle": "Ingeniero de Software",
-      "period": "2020 - 2023",
-      "description": {
-        "p1": "Drizip es una plataforma que permite a propietarios de autos arrendar sus vehículos a otras personas, disponible en Chile y México.",
-        "p2": "Durante mi tiempo en Drizip, trabajé en el backend y frontend de la plataforma y desplegué la infraestructura en AWS."
-      },
-      "imgSrc": "/img/drizip.png",
-      "href": "https://drizip.com",
-      "linkLabel": "drizip.com",
-      "tags": "React, Next.js, TypeScript, Node.js, Express, MongoDB, Meteor, AWS"
-    },
-    "roldic": {
-      "period": "September 2022",
-      "title": "Roldic Commerce SpA",
-      "subtitle": "Proyecto de desarrollo de software",
-      "description": {
-        "p1": "Roldic es una tienda que comercializa bicicletas junto a sus repuestos y accesorios.",
-        "p2": "Para este proyecto, desarrollé una plataforma E-Commerce completa, incluyendo storefront, backoffice y una API que conecta todo."
-      },
-      "imgSrc": "/img/roldic.png",
-      "href": "https://roldic.cl",
-      "linkLabel": "roldic.cl",
-      "tags": "React, Next.js, TypeScript, Node.js, NestJS, Express, MongoDB, Segment, AWS, Vercel, MercadoPago, Transbank"
-    },
-    "oso": {
-      "period": "Marzo 2020",
-      "title": "Oso Sigiloso",
-      "subtitle": "Videojuego",
-      "description": {
-        "p1": "Como parte de una investigación de pregrado, desarrollé un videojuego para demostrar un proceso sencillo para iniciarse en el desarrollo de videojuegos",
-        "p2": "Para este proyecto, escribí el código e hice la música, arte y el resto de los assets."
-      },
-      "imgSrc": "/img/oso.jpg",
-      "href": "https://github.com/benjadiazp/OsoSigiloso",
-      "linkLabel": "Ver código fuente",
-      "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
-    }
+    "viewAll": "Ver todos los proyectos ({count})",
+    "noResults": "No hay proyectos que coincidan con los filtros seleccionados.",
+    "allTags": "Todos",
+    "filterLabel": "Filtrar proyectos por etiqueta",
+    "backToProjects": "Volver a proyectos",
+    "relatedArticles": "Artículos relacionados"
+  },
+  "Blog": {
+    "title": "Blog",
+    "viewAll": "Ver todos los posts ({count})",
+    "allTypes": "Todos",
+    "allTags": "Todos",
+    "noResults": "No hay posts que coincidan con los filtros seleccionados.",
+    "filterByType": "Filtrar por tipo de contenido",
+    "filterByTag": "Filtrar por tema",
+    "backToBlog": "Volver al blog",
+    "typeBlog": "Artículos",
+    "typeVideo": "Videos",
+    "typeReel": "Reels",
+    "typePoc": "Experimentos"
+  },
+  "Search": {
+    "title": "Buscar",
+    "placeholder": "Buscar...",
+    "noResults": "No se encontraron resultados.",
+    "results": "Resultados de búsqueda",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "pages": "Páginas",
+    "close": "Cerrar búsqueda",
+    "hint": "Escribe para buscar"
   },
   "About": {
     "title": "Sobre mí",
     "backHome": "Volver al inicio",
     "bio": {
+      "heading": "Biografía",
       "p1": "Soy Benjamín, Ingeniero de Software de Chile. Actualmente trabajo en Microsoft. Antes de eso, trabajé en startups y empresas de seguridad, lo que me dio una perspectiva amplia sobre cómo construir productos desde cero y lanzarlos rápido.",
       "p2": "Estudié Ingeniería Civil en Informática en la Universidad del Bío-Bío. Más allá de mi trabajo, me apasiona usar la tecnología de forma creativa — ya sea desarrollando videojuegos, haciendo música o creando contenido sobre desarrollo de software.",
       "p3": "Creo en construir cosas que importan, escribir código limpio y siempre aprender algo nuevo. Cuando no estoy programando, me encuentro experimentando con motores de juegos, produciendo música o compartiendo lo que aprendo en YouTube y redes sociales."
@@ -192,7 +186,12 @@
     "tryAgain": "Intentar de nuevo"
   },
   "Header": {
-    "skipToContent": "Ir al contenido"
+    "skipToContent": "Ir al contenido",
+    "siteName": "Benjamín Díaz",
+    "homeLink": "Ir a la página de inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "search": "Buscar"
   },
   "LanguageSwitch": {
     "switchTo": "Cambiar idioma a {label}"
