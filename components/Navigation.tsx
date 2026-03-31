@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav aria-label={t("ariaLabel")} className={"flex justify-end gap-4"}>
       <NavItem href={`${base}/#home`}>{t("home")}</NavItem>
-      <NavItem href={`${base}/#experience`}>{t("experience")}</NavItem>
+      <NavItem href={`${base}/about`}>{t("about")}</NavItem>
       <NavItem href={`${base}/#projects`}>{t("projects")}</NavItem>
       <NavItem href={`${base}/#contact`}>{t("contact")}</NavItem>
     </nav>

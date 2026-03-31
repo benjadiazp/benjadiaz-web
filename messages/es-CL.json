@@ -84,6 +84,43 @@
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }
   },
+  "About": {
+    "title": "Sobre mí",
+    "backHome": "Volver al inicio",
+    "bio": {
+      "p1": "Soy Benjamín, Ingeniero de Software de Chile. Actualmente trabajo en Microsoft. Antes de eso, trabajé en startups y empresas de seguridad, lo que me dio una perspectiva amplia sobre cómo construir productos desde cero y lanzarlos rápido.",
+      "p2": "Estudié Ingeniería Civil en Informática en la Universidad del Bío-Bío. Más allá de mi trabajo, me apasiona usar la tecnología de forma creativa — ya sea desarrollando videojuegos, haciendo música o creando contenido sobre desarrollo de software.",
+      "p3": "Creo en construir cosas que importan, escribir código limpio y siempre aprender algo nuevo. Cuando no estoy programando, me encuentro experimentando con motores de juegos, produciendo música o compartiendo lo que aprendo en YouTube y redes sociales."
+    },
+    "interests": {
+      "title": "Lo que me interesa",
+      "gamedev": {
+        "title": "Desarrollo de videojuegos",
+        "description": "Me encanta crear experiencias interactivas. He desarrollado juegos con Unity y C#, encargándome de todo, desde el código hasta el arte y la música."
+      },
+      "music": {
+        "title": "Producción musical",
+        "description": "Produzco música como expresión creativa, usando Logic Pro X y otras herramientas para componer pistas originales para mis proyectos y más."
+      },
+      "content": {
+        "title": "Creación de contenido",
+        "description": "Comparto mis conocimientos y experiencias a través de YouTube, TikTok y otras plataformas — desde tutoriales de desarrollo hasta el detrás de cámaras de mis proyectos."
+      },
+      "opensource": {
+        "title": "Código abierto",
+        "description": "Disfruto contribuir y construir proyectos de código abierto. Creo en compartir conocimiento y construir en público."
+      }
+    },
+    "learnMore": "Conoce más sobre mí"
+  },
+  "Skills": {
+    "title": "Habilidades",
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "cloud": "Cloud e Infraestructura",
+    "databases": "Bases de datos",
+    "tools": "Herramientas"
+  },
   "Certificates": {
     "title": "Certificados",
     "seeMore": "Ver más ({count})",

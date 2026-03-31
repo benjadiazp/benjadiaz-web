@@ -1,14 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useLocale } from "next-intl";
+import { defaultLocale } from "@/i18n/routing";
 import Links from "@/components/Links";
-import Certificates from "@/components/Certificates";
-import WorkHistory from "@/components/WorkHistory";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   const t = useTranslations("Home");
+  const tAbout = useTranslations("About");
+  const locale = useLocale();
+  const base = locale === defaultLocale ? "" : `/${locale}`;
   return (
     <>
       <main id="main-content" className="relative w-full">
@@ -29,25 +33,15 @@ export default function Home() {
             <p className={"animate-fade-in-up stagger-2 mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"}>
               {t("description")}
             </p>
+            <Link
+              href={`${base}/about`}
+              className="animate-fade-in-up stagger-3 mt-4 inline-flex items-center gap-1.5 font-mono text-sm text-orange-600 transition-colors hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300"
+            >
+              {tAbout("learnMore")} &rarr;
+            </Link>
           </div>
-          <div className={"animate-fade-in-up stagger-3 mt-6 w-full"}>
+          <div className={"animate-fade-in-up stagger-4 mt-6 w-full"}>
             <Links />
-          </div>
-        </section>
-        <section
-          id={"experience"}
-          aria-labelledby="experience-heading"
-          className={
-            "mt-10 w-full scroll-mt-24 px-4 sm:mx-auto sm:max-w-screen-lg"
-          }
-        >
-          <div className="lg:grid lg:grid-cols-[2fr_3fr] lg:items-start lg:gap-8">
-            <div className="lg:order-2">
-              <WorkHistory />
-            </div>
-            <div className="mt-10 lg:order-1 lg:mt-0">
-              <Certificates />
-            </div>
           </div>
         </section>
         <section

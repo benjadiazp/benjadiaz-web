@@ -84,6 +84,43 @@
       "tags": "Unity, C#, Logic Pro X, Affinity Designer, Krita, Blender"
     }
   },
+  "About": {
+    "title": "About me",
+    "backHome": "Back home",
+    "bio": {
+      "p1": "I'm Benjamín, a Software Engineer based in Chile. I currently work at Microsoft. Before that, I worked at startups and security companies, which gave me a broad perspective on how to build products from scratch and ship them fast.",
+      "p2": "I studied Civil Engineering in Computer Science at Universidad del Bío-Bío. Beyond my day job, I'm passionate about using technology creatively — whether that's developing video games, making music, or creating content about software development.",
+      "p3": "I believe in building things that matter, writing clean code, and always learning something new. When I'm not coding, you'll find me experimenting with game engines, producing music, or sharing what I learn on YouTube and social media."
+    },
+    "interests": {
+      "title": "What I'm into",
+      "gamedev": {
+        "title": "Game Development",
+        "description": "I love creating interactive experiences. I've built games with Unity and C#, handling everything from code to art and music."
+      },
+      "music": {
+        "title": "Music Production",
+        "description": "I produce music as a creative outlet, using Logic Pro X and other tools to compose original tracks for my projects and beyond."
+      },
+      "content": {
+        "title": "Content Creation",
+        "description": "I share my knowledge and experiences through YouTube, TikTok, and other platforms — from dev tutorials to behind-the-scenes of my projects."
+      },
+      "opensource": {
+        "title": "Open Source",
+        "description": "I enjoy contributing to and building open source projects. I believe in sharing knowledge and building in public."
+      }
+    },
+    "learnMore": "Learn more about me"
+  },
+  "Skills": {
+    "title": "Skills",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "cloud": "Cloud & Infrastructure",
+    "databases": "Databases",
+    "tools": "Tools"
+  },
   "Certificates": {
     "title": "Certificates",
     "seeMore": "See more ({count})",
